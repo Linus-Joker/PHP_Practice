@@ -15,6 +15,11 @@ class Transportation
 class Car extends Transportation
 { }
 
-$myCar = new Car();
+class Bike extends Car
+{ }
 
+$myCar = new Car();
 $myCar->run();
+
+$mybike = new Bike();
+$mybike->run();
