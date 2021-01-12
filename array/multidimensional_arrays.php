@@ -52,7 +52,3 @@ function multidimensional_arrays_cart_test()
     }
   }
 }
-
-// base();
-// multidimensional_arrays();
-multidimensional_arrays_cart_test();
