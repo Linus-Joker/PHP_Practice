@@ -42,6 +42,8 @@ class Cart
         // dd($storedItem);
       }
     }
+
+    //單項商品的數量
     $storedItem['qty'] = $qty;
     //單項商品的總價格
     $storedItem['price'] = $book['price'] * $storedItem['qty'];
@@ -103,11 +105,16 @@ $book = new Cart($oldCart);
 $book->add($product1, 1, 1);
 // echo $book->totalQty . "\n";
 // echo $book->totalPrice . "\n";
-print_r($book);
+// print_r($book);
 
 $book2 = new Cart($book);
 $book2->add($product2, 2, 2);
-print_r($book2);
+// print_r($book2);
+print_r($book2->items);
+echo '--------------------------' . "\n";
+foreach ($book2->items as $key => $value) {
+  echo $value['item']['book'];
+}
 
 // cart_test($book1);
 // cart_test($book2);
