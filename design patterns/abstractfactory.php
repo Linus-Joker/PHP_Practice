@@ -2,7 +2,6 @@
 
 /**
  * AbstractFactory
- * 
  */
 
 // 產品類：
