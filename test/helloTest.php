@@ -2,7 +2,9 @@
 
 use PHPUnit\Framework\TestCase;
 
-require __DIR__ . './say.php';
+require '../other/say.php';
+
+use Other\Say;
 
 class HelloTest extends TestCase
 {

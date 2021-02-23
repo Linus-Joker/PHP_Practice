@@ -1,5 +1,7 @@
 <?php
 
+namespace DesignPatterns\Creational\Prototype;
+
 /**
  * Prototype
  */
