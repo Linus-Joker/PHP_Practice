@@ -1,4 +1,5 @@
 <?php
+
 namespace Other;
 
 class Say
