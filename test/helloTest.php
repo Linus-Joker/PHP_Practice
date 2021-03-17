@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require '../other/say.php';
+require '../Other/Say.php';
 
 use Other\Say;
 
