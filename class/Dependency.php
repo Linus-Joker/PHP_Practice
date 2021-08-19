@@ -26,6 +26,9 @@ class Hamburger implements Food
 //1.建構子注入
 class People
 {
+	//原本要吃食物要依賴apple或者hamburger
+	//但是當要改吃別種食物，就要改食物內容
+	//現在透過Food interface 去找到其他食物類別
     public function __construct(Food $food)
     {
         $this->food = $food;
