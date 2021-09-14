@@ -1,6 +1,11 @@
 <?php
 
-function restoreString(String $sss, array $indices)
+/**
+ * @param string $sss
+ * @param Integer[] $indices
+ * @return string $String
+ */
+function restoreString(String $sss, array $indices): String
 {
     $res = [];
     // $String = null;
@@ -16,6 +21,4 @@ function restoreString(String $sss, array $indices)
     return $String;
 }
 
-
-// echo restoreString("codeleet", [4, 5, 6, 7, 0, 2, 1, 3]);
-print_r(restoreString("codeleet", [4, 5, 6, 7, 0, 2, 1, 3]));
+echo restoreString("codeleet", [4, 5, 6, 7, 0, 2, 1, 3]);
