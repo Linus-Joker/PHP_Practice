@@ -13,8 +13,12 @@ function restoreString(String $sss, array $indices): String
     $ExplodedString = str_split($sss);
 
     for ($i = 0; $i < $stringSize; $i++) {
+
+        //$res要取得的位置是$indices裡面的數字
         $res[$indices[$i]] = $ExplodedString[$i];
     }
+
+    //php 關聯數組要用ksort()排序
     ksort($res);
     $String = implode($res);
 
