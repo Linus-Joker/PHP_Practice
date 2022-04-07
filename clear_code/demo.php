@@ -1,7 +1,6 @@
 <?php
 
 # clear code demo
-
 function isDay(string $day)
 {
   if (empty($day)) {
@@ -16,7 +15,6 @@ function isDay(string $day)
 }
 
 // print(isDay('BAA'));
-
 function fibonacci(int $n): int
 {
   if ($n === 0 || $n === 1) {
