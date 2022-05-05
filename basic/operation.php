@@ -32,6 +32,42 @@ echo $x++;
 //邏輯運算子
 //數組運算子
 //三元運算子
+//三元運算子練習1
+function getName()
+{
+    //先設name 為true
+    $name = "milk";
+
+    //?前面的變數如果為true，則將$name變數給$userName
+    // $userName = $name ? $name : 'nobody';
+
+    //PHP7新寫法
+    $userName = $name ?? 'nobody';
+    echo $userName . "\n";
+
+
+    //再設name2 為false
+    $name = false;
+
+    //?前面的變數如果為false，則將nobody給$userName
+    $userName = $name ? $name : 'nobody';
+    echo $userName;
+}
+getName();
+
+//三元運算子練習2
+function name()
+{
+
+    $firstName = 'milk';
+    $userName = 'banana';
+    $placeholder = 'candy';
+
+    $name = $firstName ?? $userName ?? $placeholder ?? "Guest";
+    echo $name;
+}
+name();
+
 //組合比較
 $c = $a <=> $b;
 //如果 $a > $b, 則 $c 的值為 1。
