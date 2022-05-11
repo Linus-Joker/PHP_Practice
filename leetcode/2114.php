@@ -11,18 +11,22 @@
  */
 function mostWordsFound($sentences)
 {
-    $max_sentences = 0;
-    foreach ($sentences as $key => $value) {
-        $str = $value;
-        $arr = explode(" ", $str);
-        $count_str = count($arr);
+    $max_quantity = 0;
 
-        if ($count_str > $max_sentences) {
-            $max_sentences = $count_str;
+    //get array sentences
+    foreach ($sentences as $key => $value) {
+        // $str = $value;
+        $arr = explode(" ", $value);
+
+        //get sentences quantity
+        $sentences_quantity = count($arr);
+
+        if ($sentences_quantity > $max_quantity) {
+            $max_quantity = $sentences_quantity;
         }
     }
 
-    return $max_sentences;
+    return $max_quantity;
 }
 
 $sentences = [
