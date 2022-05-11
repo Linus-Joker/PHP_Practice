@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * Find Target Indices After Sorting Array
+ * 排序後找到目標索引
  * input: $nums = [1, 2, 5, 2, 3]
  * output: 2
  */
@@ -22,13 +24,16 @@ function targetIndices($nums, $target)
         }
     }
 
-    return $arr;
+    print_r($arr);
 }
 
 $nums = [1, 2, 5, 2, 3];
 
 targetIndices($nums, 2);
 
-rsort($nums);
-
-print_r($nums);
+/**
+ * Solution:
+ * 將數組重新排序後，依序取出數值和目標比對
+ * 因為可能會有複數相同的情況
+ * 所以存入數組
+ */
