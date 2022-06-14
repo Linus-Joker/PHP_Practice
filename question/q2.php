@@ -122,7 +122,7 @@ function fizzBuzz(int $num)
 //9.自己的遞迴練習
 function recursive(int $num)
 {
-    if ($num >= 10) return "次數已加到" . $num;
+    if ($num == 10) return "次數已加到" . $num;
 
     return recursive($num + 1);
     // return "not plus.";
@@ -145,7 +145,7 @@ function add()
 
 // add();
 
-//11.隨機選出1~42的數字，並不重複
+//11.隨機選出1~42的6個數字，並不重複
 function lotto()
 {
     $numList = [];
@@ -295,7 +295,7 @@ function randMaxMinNumber()
 //應找回最少的錢幣個數 50元,10元,5元,1元各為若干個。
 
 
-//21.20階乘
+//21.1 階乘
 function factorial()
 {
     //C語言好像會進位錯誤，這邊測php沒問題
@@ -316,7 +316,7 @@ function fact(int $num)
     return $num * fact($num - 1);
 }
 
-// echo fact(5);
+// echo fact(20);
 
 //22.判斷質數
 function judgmentPrime($num)
@@ -391,8 +391,9 @@ function repairNum(array $list)
     $maxNum = max($list);
     $countNum = count($list);
 
-    echo "要補的數字有" . $maxNum - $countNum . "個";
+    //php8 要將+,- 加上''
+    echo "要補的數字有" . $maxNum . '-' . $countNum . "個";
     // echo $countNum;
 }
 
-echo repairNum([1, 4, 8]); //5
+// echo repairNum([1, 4, 8]); //5
