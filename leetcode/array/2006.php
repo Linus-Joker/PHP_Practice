@@ -19,12 +19,17 @@ function countKDifference($nums, $k)
     $result = 0;
 
     for ($i = 0; $i < count($nums); $i++) {
-        for ($j = $i + 1; $j < count($nums); $j++) {
+        for ($j =  $i + 1; $j < count($nums); $j++) {
             if (abs($nums[$i] - $nums[$j]) === $k) {
                 $result++;
             }
         }
     }
 
-    return $result;
+    echo $result;
 }
+
+$nums = [3, 2, 1, 5, 4];
+$k = 2;
+
+countKDifference($nums, $k);
