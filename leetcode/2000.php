@@ -48,3 +48,37 @@ $ch = "d";
 reversePrefix($word, $ch);
 
 //Output: "zxyxxe";
+
+
+
+/**
+ * @param String $word
+ * @param String $ch
+ * @return String
+ */
+function reversePrefixExample($word, $ch)
+{
+    //將字串拆解數組
+    $w_parts = str_split($word);
+
+    //找出$ch出現的第一個index
+    $ch_location = array_search($ch, $w_parts);
+
+    //沒有就返回原字串word
+    if ($ch_location === false) return $word;
+
+    //取出數組的位子從0到出現的地方，翻轉
+    $ctr = array_slice($w_parts, 0, $ch_location + 1);
+    krsort($ctr);
+
+    //將原數組0~長度的位子刪除，添加剛剛翻轉的部分
+    array_splice($w_parts, 0, $ch_location, $ctr);
+
+    //最後轉回字串返回
+    return implode('', $w_parts);
+}
+
+$word = "abcdefd";
+$ch = "d";
+
+print_r(reversePrefixExample($word, $ch));
